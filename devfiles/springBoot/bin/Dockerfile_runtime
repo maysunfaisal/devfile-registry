@@ -1,0 +1,8 @@
+FROM ibmjava:8-sfj
+
+RUN mkdir -p /myproject
+
+RUN chgrp -R 0 /myproject && \
+    chmod -R g=u /myproject
+
+COPY bin /artifacts/bin
